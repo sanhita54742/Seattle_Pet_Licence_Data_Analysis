@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="126" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>\t</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Seattle_Pet_Licenses (1).tsv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="License Issue Date" size="254" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_WString" />
+            <Field name="License Number" size="254" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_WString" />
+            <Field name="Animal's Name" size="254" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_WString" />
+            <Field name="Species" size="254" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_WString" />
+            <Field name="Primary Breed" size="254" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_WString" />
+            <Field name="Secondary Breed" size="254" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_WString" />
+            <Field name="ZIP Code" size="254" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="450" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="License Issue Date" selected="True" type="DateTime" size="19" />
+            <SelectField field="Species" selected="True" size="254" />
+            <SelectField field="ZIP Code" selected="True" type="Int64" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="294" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="License Issue Date" selected="True" />
+            <Field field="License Number" selected="True" />
+            <Field field="Animal's Name" selected="True" />
+            <Field field="Species" selected="True" />
+            <Field field="Primary Breed" selected="True" />
+            <Field field="Secondary Breed" selected="True" />
+            <Field field="ZIP Code" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="License Issue Date" size="17" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="String" />
+            <Field name="License Number" size="7" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="String" />
+            <Field name="Animal's Name" size="50" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_WString" />
+            <Field name="Species" size="4" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="String" />
+            <Field name="Primary Breed" size="46" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_String" />
+            <Field name="Secondary Breed" size="46" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="V_String" />
+            <Field name="ZIP Code" source="File: C:\Users\vedvo\OneDrive\Desktop\DADABI\Seattle_Pet_Licenses (1).tsv" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="618" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\vedvo\AppData\Local\Temp\Engine_14280_99cf69cab923214ea96066bfac8d2e01_\Engine_14280_c5955cc9f4d10e4284ef087df06fef07~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="594" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="DI_Created_Date" size="19" type="DateTime" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[DI_Created_Date = DateTimeNow()
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="918" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\vedvo\AppData\Local\Temp\Engine_14280_99cf69cab923214ea96066bfac8d2e01_\Engine_14280_61f064f1be64b64d81b587b04b599c7e~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="762" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Record_ID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Data_preparing</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="157b8f9e-079d-48b9-80af-5bf397750fc5" />
+      <Telemetry>
+        <PreviousWorkflowId value="06b6003e-53d6-434e-aed6-a4f177146cae" />
+        <OriginWorkflowId value="06b6003e-53d6-434e-aed6-a4f177146cae" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
